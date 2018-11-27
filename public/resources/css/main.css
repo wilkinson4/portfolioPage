@@ -51,7 +51,7 @@ section {
     background-color: #99ce6e;
     width: 25%; 
     margin: 25px auto;
-    color: #efedef;
+    color: #fff;
 }
 .error {
     border: 1px solid #d63d26;
@@ -60,7 +60,7 @@ section {
     background-color: #e26f5e;
     width: 25%; 
     margin: 25px auto;
-    color: #efedef;
+    color: #fff;
 }
 
 /* ------- HEADINGS ---------*/
