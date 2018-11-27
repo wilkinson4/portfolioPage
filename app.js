@@ -69,7 +69,7 @@ app.post("/", function(req, res) {
     mailOpts = {
         from: req.body.email,
         to: process.env.GMAIL_USER,
-        subject: "New message from my portfolio site from",
+        subject: "New Message From My Portfolio Site",
         text: `${req.body.name} says: ${req.body.message} \n (${req.body.email})`
     };
     smtpTrans.sendMail(mailOpts, function(error, response) {
