@@ -58,7 +58,8 @@
         margin-top: 15px;
         font-size: 150%; 
     }
-    .skills-section { padding-bottom: 500px; }
+    .skills-section { height: 130vh; }
+    .alert, .success{ width: 100%; }
     .hero-text-box p { font-size: 120%; }
     .row,
     .hero-text-box { padding: 0 4%; }

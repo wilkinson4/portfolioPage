@@ -69,17 +69,17 @@ app.post("/", function(req, res) {
     mailOpts = {
         from: req.body.email,
         to: process.env.GMAIL_USER,
-        subject: "New message from my portfolio page",
+        subject: "New message from my portfolio site from",
         text: `${req.body.name} says: ${req.body.message} \n (${req.body.email})`
     };
     smtpTrans.sendMail(mailOpts, function(error, response) {
         if (error) {
             req.flash("error", "Something went wrong. Please try again.");
-            res.redirect("/");
+            res.redirect("/#contact");
         }
         else {
             req.flash("success", "Message Sent!");
-            res.redirect("/");
+            res.redirect("/#contact");
         }
     });
 });

@@ -49,12 +49,16 @@ section {
     padding: 10px;
     border-radius: 10px;
     background-color: #99ce6e;
+    width: 25%; 
+    margin: 25px auto;
 }
 .error {
     border: 1px solid #d63d26;
     padding: 10px;
     border-radius: 10px;
     background-color: #e26f5e;
+    width: 25%; 
+    margin: 25px auto;
 }
 
 /* ------- HEADINGS ---------*/

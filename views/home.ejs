@@ -124,18 +124,18 @@
     </div>
     <div class="row">
         <% if(error && error.length > 0){ %>
-            <div class="alert" role="alert" style="width: 25%; margin: 25px auto;">
+            <div class="alert" role="alert">
                 <%= error %>
             </div>
         <% } %>
         <% if(success && success.length > 0){ %>
-            <div class="success" role="alert" style="width: 25%; margin: 25px auto;">
+            <div class="success" role="alert">
                 <%= success %>
             </div>
         <% } %>
     </div>
     <div class="row">
-        <form method="post" action="#" class="contact-form">
+        <form method="post" action="/" class="contact-form">
             <div class="row">
                 <div class="col span-2-of-2">
                     <label for="name">Name</label>
