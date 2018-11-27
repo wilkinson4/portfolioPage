@@ -1,0 +1,173 @@
+<% include ./partials/header %>
+
+<header>
+    <nav>
+        <div class="row">
+            <a class="mobile-nav-icon js--nav-icon">
+                <ion-icon name="menu"></ion-icon>
+            </a>
+            <ul class="main-nav js--main-nav">
+                <li><a href="#" class="js--scroll-to-bio">Bio</a></li>
+                <li><a href="#" class="js--scroll-to-skills">Skills</a></li>
+                <li><a href="#" class="js--scroll-to-projects">My Projects</a></li>
+                <li><a href="#" class="js--scroll-to-contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="hero-text-box">
+        <h1>Will Wilkinson</h1>
+        <p><span class="typed"></span></p>
+    </div>
+</header>
+
+<section class="bio-section js--section-bio" id="bio">
+    <div class="row">
+        <h2>Hi, I'm Will. Nice to meet you.</h2>
+    </div>
+    <div class="row">
+        <div class="col box">
+            <p>I'm a Web Designer and Full-Stack Developer focused on creating clean & user-friendly experiences. I have been tinkering with technology since I was a kid, and have a passion for learning new techniques to make my products more user-friendly
+                and visually aesthetic.</p>
+        </div>
+    </div>
+</section>
+
+<section class="skills-section js--section-skills" id="skills">
+    <div class="row">
+        <h2>My Skills</h2>
+    </div>
+    <div class="row">
+        <div class="col span-1-of-2 box">
+            <div class="skills-box js--wp-1">
+                <div>
+                    <h3>Front-end</h3>
+                </div>
+                <div>
+                    <ul>
+                        <li><ion-icon name="checkbox-outline" class="icon-small"></ion-icon>HTML5</li>
+                        <li><ion-icon name="checkbox-outline" class="icon-small"></ion-icon>CSS3</li>
+                        <li><ion-icon name="checkbox-outline" class="icon-small"></ion-icon>Javascript/jQuery</li>
+                        <li><ion-icon name="checkbox-outline" class="icon-small"></ion-icon>UI/UX Design</li>
+                        <li><ion-icon name="checkbox-outline" class="icon-small"></ion-icon>Bootstrap</li>
+                        <li><ion-icon name="checkbox-outline" class="icon-small"></ion-icon>Semantic UI</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col span-1-of-2 box">
+            <div class="skills-box js--wp-2">
+                <div>
+                    <h3>Back-end</h3>
+                </div>
+                <div>
+                    <ul>
+                        <li><ion-icon name="checkbox-outline" class="icon-small"></ion-icon>Node.js</li>
+                        <li><ion-icon name="checkbox-outline" class="icon-small"></ion-icon>Express</li>
+                        <li><ion-icon name="checkbox-outline" class="icon-small"></ion-icon>MongoDB</li>
+                        <li><ion-icon name="checkbox-outline" class="icon-small"></ion-icon>DevOps</li>
+                        <li><ion-icon name="checkbox-outline" class="icon-small"></ion-icon>VCS</li>
+                        <li><ion-icon name="checkbox-outline" class="icon-small"></ion-icon>RESTful API's</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="projects-section js--section-projects" id="projects">
+    <div class="row">
+        <h2>Projects</h2>
+    </div>
+    <div class="row">
+        <p>Here are a few of my recent design projects. Want to see more? <a href="mailto:wfw40869@gmail.com">Email Me</a></p>
+    </div>
+    <div class="row">
+        <div class="col span-1-of-3 box js--wp-3">
+            <figure class="image is-3by2">
+                <img class="project-thumb"  src="/resources/img/yelpcamp.png" alt="YelpCamp logo">
+                <figcaption>
+                    <h3>YelpCamp</h3>
+                    <a href="https://enigmatic-peak-32725.herokuapp.com/" class="btn btn-full" target="_blank">View Site <ion-icon name="ios-arrow-forward"></ion-icon></a>
+                    <a href="https://github.com/wfw40869/YelpCamp.git" class="btn btn-ghost" target="_blank">View Code <ion-icon name="ios-arrow-forward"></ion-icon></a>
+                    <div class="overlay"></div>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col span-1-of-3 box">
+                <figure class="image is-3by2">
+                    <img class="project-thumb" src="/resources/img/omnifood-project.jpg" alt="Omnifood">
+                    <figcaption>
+                        <h3>Omnifood</h3>
+                        <a href="https://wfw40869.github.io/wfwomnifood.github.io/" class="btn btn-full" target="_blank">View Site <ion-icon name="ios-arrow-forward"></ion-icon></a>
+                        <a href="https://github.com/wfw40869/wfwomnifood.github.io.git" class="btn btn-ghost" target="_blank">View Code <ion-icon name="ios-arrow-forward"></ion-icon></a>
+                        <div class="overlay"></div>
+                    </figcaption>
+                </figure>
+        </div>
+        <div class="col span-1-of-3 box">
+            <figure class="image is-3by2">
+                <img class="project-thumb"  src="/resources/img/integrity-project.png" alt="Integrity Pools">
+                <figcaption>
+                    <h3>Integrity Pools</h3>
+                    <a href="https://codepen.io/wfw40869/full/YRyEKe" class="btn btn-full" target="_blank">View Site <ion-icon name="ios-arrow-forward"></ion-icon></a>
+                    <a href="https://codepen.io/wfw40869/pen/WKVgyx" class="btn btn-ghost" target="_blank">View Code <ion-icon name="ios-arrow-forward"></ion-icon></a>
+                    <div class="overlay"></div>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<section class="form-section js--section-contact" id="contact">
+    <div class="row">
+        <h2>Get in touch with me</h2>
+    </div>
+    <div class="row">
+        <% if(error && error.length > 0){ %>
+            <div class="alert" role="alert" style="width: 25%; margin: 25px auto;">
+                <%= error %>
+            </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+            <div class="success" role="alert" style="width: 25%; margin: 25px auto;">
+                <%= success %>
+            </div>
+        <% } %>
+    </div>
+    <div class="row">
+        <form method="post" action="#" class="contact-form">
+            <div class="row">
+                <div class="col span-2-of-2">
+                    <label for="name">Name</label>
+                </div>
+                <div class="col span-2-of-2">
+                    <input type="text" name="name" id="name" placeholder="Your name"  required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col span-2-of-2">
+                    <label for="email">Email</label>
+                </div>
+                <div class="col span-2-of-2">
+                    <input type="email" name="email" id="email" placeholder="Your email" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col span-2-of-2">
+                    <label>Message</label>
+                </div>
+                <div class="col span-2-of-2">
+                    <textarea name="message" placeholder="Your message" required="required" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col span-2-of-2">
+                    <input type="submit" value="Send it!">
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+<% include ./partials/footer %>
