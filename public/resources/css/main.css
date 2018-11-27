@@ -337,7 +337,6 @@ header {
     background-attachment: fixed;
     line-height: 170%;
     letter-spacing: 1px;
-    padding-top: 150px;
 }
 .skills-section h2 { 
     color: #efedef;
@@ -380,7 +379,6 @@ figure {
     overflow: hidden;
     border-radius: 12px;
     margin-top: 50px;
-    /*background-image: linear-gradient(rgba(34, 32, 32, 1), rgba(34, 32, 34, 1));*/
     -webkit-box-shadow: 1px 1px 5px #ceccce;
     box-shadow: 1px 1px 5px #ceccce;
 }

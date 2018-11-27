@@ -48,13 +48,17 @@
 
     .sticky .main-nav li a:hover,
     .sticky .main-nav li a:active{
-        border-bottom: 2px solid #e67e22;
+        border-bottom: 2px solid #6ead3a;
     }
     .sticky .mobile-nav-icon { margin-top: 10px; }
     .sticky .mobile-nav-icon ion-icon { color: #4c4947; }
     
     h1 { font-size: 180%; }
-    h2 { font-size: 150%; }
+    h2 {
+        margin-top: 15px;
+        font-size: 150%; 
+    }
+    .skills-section { padding-bottom: 500px; }
     .hero-text-box p { font-size: 120%; }
     .row,
     .hero-text-box { padding: 0 4%; }
@@ -68,5 +72,4 @@
 @media only screen and (max-width: 480px){
     section { padding: 25px 0; }
     .contact-form { width: 100%; }
-    .skills-section{ padding-bottom: 1000px; }
 }
