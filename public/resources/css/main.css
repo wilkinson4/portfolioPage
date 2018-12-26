@@ -387,6 +387,7 @@ figure {
     margin-top: 50px;
     -webkit-box-shadow: 1px 1px 5px #ceccce;
     box-shadow: 1px 1px 5px #ceccce;
+    /*background-image: linear-gradient(rgba(76, 73, 71), rgba(76, 73, 71));*/
 }
 figcaption {
     display: flex;
@@ -401,6 +402,10 @@ figcaption {
     height: 100%;
     opacity: 0;
     transition: .45s ease-in-out;
+}
+
+.project_title {
+    opacity: 1;
 }
 .projects-section{ 
     border-bottom: 1px solid #ceccce;
