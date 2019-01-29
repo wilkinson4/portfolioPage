@@ -1,5 +1,8 @@
  /*Big tablet to 1200px (widths smaller than the 1140px row) */
-@media only screen and (max-width: 1200px) { .row { padding: 0 4%;} }
+@media only screen and (max-width: 1200px) { 
+    .row { padding: 0 4%;}
+    .projects-section .btn{ font-size: 70%; }
+}
 
 
 /* Small tablet to big tablet: 768-1023px */
@@ -12,6 +15,10 @@
         margin-right: 5px; 
     }
     .contact-form { width: 80%; }
+    .projects-section .btn{ 
+        font-size: 65%; 
+    }
+   .projects-section h3 { font-size: 95%; } 
 }
 
 
@@ -67,10 +74,22 @@
         width: 100%;
         margin: 0 0 4% 0;
     }
+    .projects-section .btn{ 
+        font-size: 85%;
+    }
+    .projects-section h3 {
+        font-size: 150%;
+    }
 }
 
 /* Small phones: 0-480px */
 @media only screen and (max-width: 480px){
     section { padding: 25px 0; }
     .contact-form { width: 100%; }
+        .projects-section .btn{ 
+        font-size: 75%;
+    }
+    .projects-section h3 {
+        font-size: 120%;
+    }
 }

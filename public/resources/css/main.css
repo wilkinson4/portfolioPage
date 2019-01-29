@@ -393,7 +393,6 @@ figcaption {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 3rem;
     z-index: 1;
     position: absolute;
     top: 0;
@@ -450,10 +449,11 @@ figcaption {
 }
 .projects-section .btn {
     display: inline-block;
-    width: 63%;
+    width: 40%;
     height: auto;
     margin: 3px auto;
-    font-size: 90%;
+    font-size: 75%;
+    padding: 6px;
 }
 .projects-section .row p a {
     color: #3273dc;
