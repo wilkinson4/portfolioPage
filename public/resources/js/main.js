@@ -59,7 +59,7 @@ $(document).ready(function() {
     });
     
 	$(".typed").typed({
-		strings: ["Tech Enthusiast", "Web Designer", "Full Stack Developer"],
+		strings: ["Tech Enthusiast", "Web Designer", "Front-End Developer"],
 		// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
 		stringsElement: null,
 		// typing speed
