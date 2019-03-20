@@ -1,32 +1,13 @@
 require('dotenv').config();
 
-var express = require("express"),
+let express = require('express'),
     app     = express(),
     serveStatic = require('serve-static'),
     nodemailer = require('nodemailer'),
     bodyParser = require('body-parser'),
-    flash = require("connect-flash"),
-    { google } = require('googleapis'),
-    OAuth2 = google.auth.OAuth2;
+    flash = require('connect-flash'),
+    middleware = require('./middleware');
     
-const oauth2Client = new OAuth2(
-        process.env.CLIENTID,
-        process.env.CLIENTSECRET,
-        "https://developers.google.com/oauthplayground"
-    );
-oauth2Client.setCredentials({
-     refresh_token:  process.env.REFRESHTOKEN
-});
-
-async function getAccessToken() {
-    await oauth2Client.getRequestHeaders(function(err, tokens){
-        if(err){
-            console.log(err);
-        } else {
-            return tokens.credentials.access_token;
-        }
-    });
-}
 
 app.use(flash());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -45,43 +26,20 @@ app.use(function(req, res, next){
     res.locals.success = req.flash("success");
     next();
 }); 
+// ==========
+// ROUTES
+// ==========
 
+//INDEX ROUTE
 app.get("/", function(req, res){
     res.render("home");
 });
 
-// POST route from contact form
+// POST ROUTE from contact form
 app.post("/", function(req, res) {
-    let mailOpts, smtpTrans;
-    smtpTrans = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 465,
-        secure: true,
-        auth: {
-            type: "OAuth2",
-            user: process.env.GMAIL_USER,
-            clientId: process.env.CLIENTID,
-            clientSecret: process.env.CLIENTSECRET,
-            refreshToken: process.env.REFRESHTOKEN,
-        }
-    });
-    mailOpts = {
-        from: req.body.email,
-        to: process.env.GMAIL_USER,
-        subject: "New Message From My Portfolio Site",
-        text: `${req.body.name} says: ${req.body.message} \n (${req.body.email})`
-    };
-    smtpTrans.sendMail(mailOpts, function(error, response) {
-        if (error) {
-            req.flash("error", "Something went wrong. Please try again.");
-            res.redirect("/#contact");
-        }
-        else {
-            req.flash("success", "Message Sent!");
-            res.redirect("/#contact");
-        }
-    });
+    middleware.sendMail(req,res);
 });
+
 
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("The Server Has Started!") ;
