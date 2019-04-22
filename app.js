@@ -1,16 +1,17 @@
 require('dotenv').config();
 
 let express = require('express'),
-    app     = express(),
+    app = express(),
     serveStatic = require('serve-static'),
     nodemailer = require('nodemailer'),
     bodyParser = require('body-parser'),
     flash = require('connect-flash'),
     middleware = require('./middleware');
-    
+
+
 
 app.use(flash());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(serveStatic('public/'));
 
@@ -21,17 +22,17 @@ app.use(require("express-session")({
     saveUninitialized: false
 }));
 
-app.use(function(req, res, next){
+app.use(function(req, res, next) {
     res.locals.error = req.flash("error");
     res.locals.success = req.flash("success");
     next();
-}); 
+});
 // ==========
 // ROUTES
 // ==========
 
 //INDEX ROUTE
-app.get("/", function(req, res){
+app.get("/", function(req, res) {
     res.render("home");
 });
 
@@ -41,6 +42,6 @@ app.post("/", function(req, res) {
 });
 
 
-app.listen(process.env.PORT, process.env.IP, function(){
-    console.log("The Server Has Started!") ;
+app.listen(process.env.PORT, process.env.IP, function() {
+    console.log("The Server Has Started!");
 });
