@@ -1,9 +1,8 @@
 require('dotenv').config();
 
-let express = require('express'),
+const express = require('express'),
     app = express(),
     serveStatic = require('serve-static'),
-    nodemailer = require('nodemailer'),
     bodyParser = require('body-parser'),
     flash = require('connect-flash'),
     middleware = require('./middleware');
@@ -22,7 +21,7 @@ app.use(require("express-session")({
     saveUninitialized: false
 }));
 
-app.use(function(req, res, next) {
+app.use((req, res, next) => {
     res.locals.error = req.flash("error");
     res.locals.success = req.flash("success");
     next();
@@ -32,16 +31,16 @@ app.use(function(req, res, next) {
 // ==========
 
 //INDEX ROUTE
-app.get("/", function(req, res) {
+app.get("/", (req, res) => {
     res.render("home");
 });
 
 // POST ROUTE from contact form
-app.post("/", function(req, res) {
+app.post("/", (req, res) => {
     middleware.sendMail(req,res);
 });
 
 
-app.listen(process.env.PORT, process.env.IP, function() {
+app.listen(process.env.PORT, process.env.IP, () => {
     console.log("The Server Has Started!");
 });
