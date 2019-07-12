@@ -7,23 +7,18 @@ const nodemailer = require('nodemailer'),
 async function main() {
     middlewareObj.sendMail = (req, res, next) => {
         const transporter = nodemailer.createTransport({
-            host: 'smtp.office365.com',
-            port: 587,
-            secureConnection: false,
+            service: 'Hotmail',
             auth: {
                 user: process.env.USER,
                 pass: process.env.PASSWORD
-            },
-            tls: {
-                ciphers: 'SSLv3'
             }
         });
 
         const mailOpts = {
-            from: req.body.email,
+            from: process.env.USER,
             to: process.env.USER,
             subject: "New Message From My Portfolio Site",
-            text: `${req.body.name} says: ${req.body.message} \n (${req.body.email})`,
+            text: `${req.body.name} says:\n ${req.body.message} \n (${req.body.email})`,
         }
 
         transporter.sendMail(mailOpts, (error, response) => {
