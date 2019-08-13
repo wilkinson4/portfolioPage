@@ -27,6 +27,7 @@ async function main() {
                 req.flash("error", "Something went wrong. Please try again.");
                 res.redirect("/#contact");
             } else {
+                console.log(response)
                 req.flash("success", "Message Sent!");
                 res.redirect("/#contact");
             }
