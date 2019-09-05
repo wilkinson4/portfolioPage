@@ -331,6 +331,10 @@ header {
     padding-bottom: 150px;
 }
 
+.aboutMe__div > .aboutMe__p:first-of-type {
+    margin-bottom: 100px;
+}
+
 /* ========================= */
 /* SKILLS SECTION */
 /* ========================= */
