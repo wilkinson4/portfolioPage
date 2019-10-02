@@ -1,6 +1,6 @@
  /*Big tablet to 1200px (widths smaller than the 1140px row) */
 @media only screen and (max-width: 1200px) { 
-    .row { padding: 0 4%;}
+    .row { margin: 0 4%;}
     .projects-section .btn{ font-size: 70%; }
 }
 
@@ -79,6 +79,9 @@
     }
     .projects-section h3 {
         font-size: 150%;
+    }
+    .projects-description {
+        padding: 5% 0;
     }
 }
 
