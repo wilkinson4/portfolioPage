@@ -11,7 +11,7 @@
 html,
 body {
   color: #222022;
-  font-family: "Roboto", "Arial", sans-serif;
+  font-family: 'Roboto', 'Arial', sans-serif;
   font-weight: 300;
   font-size: 20px;
   text-rendering: optimizeLegibility;
@@ -62,7 +62,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h1,
@@ -99,7 +99,7 @@ h2:after {
   display: block;
   height: 2px;
   background-color: #6ead3a;
-  content: " ";
+  content: ' ';
   width: 100px;
   margin: 0 auto;
   margin-top: 30px;
@@ -143,19 +143,23 @@ h2:after {
 
 .btn:link,
 .btn:visited,
-input[type="submit"] {
+input[type='submit'] {
   display: inline-block;
   padding: 10px 30px;
   font-weight: 300;
   text-decoration: none;
   border-radius: 150px;
-  -webkit-transition: background-color 0.2s, border 0.2s;
-  transition: background-color 0.2s, border 0.2s;
+  -webkit-transition:
+    background-color 0.2s,
+    border 0.2s;
+  transition:
+    background-color 0.2s,
+    border 0.2s;
 }
 
 .btn-full:link,
 .btn-full:visited,
-input[type="submit"] {
+input[type='submit'] {
   background-color: #6ead3a;
   border: 2px solid #6ead3a;
   color: #fff;
@@ -165,7 +169,7 @@ input[type="submit"] {
 
 .btn-ghost:link,
 .btn-ghost:visited,
-input[type="submit"] {
+input[type='submit'] {
   border: 2px solid #6ead3a;
   color: #fff;
   margin-right: 15px;
@@ -174,23 +178,23 @@ input[type="submit"] {
 
 .btn:hover,
 .btn:active,
-input[type="submit"]:hover,
-input[type="submit"]:active {
+input[type='submit']:hover,
+input[type='submit']:active {
   background-color: #56872d;
   cursor: pointer;
 }
 
 .btn-full:hover,
 .btn-full:active,
-input[type="submit"]:hover,
-input[type="submit"]:active {
+input[type='submit']:hover,
+input[type='submit']:active {
   border: 2px solid #56872d;
 }
 
 .btn-ghost:hover,
 .btn-ghost:active,
-input[type="submit"]:hover,
-input[type="submit"]:active {
+input[type='submit']:hover,
+input[type='submit']:active {
   background-color: #56872d;
   border: 2px solid #56872d;
 }
@@ -204,12 +208,14 @@ header {
       rgba(76, 73, 71, 0.6),
       rgba(76, 73, 71, 0.6)
     ),
-    url("img/hero.jpg");
+    url('../resources/img/hero.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
   background-attachment: fixed;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+  text-shadow:
+    0px 4px 3px rgba(0, 0, 0, 0.4),
+    0px 8px 13px rgba(0, 0, 0, 0.1),
     0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 
@@ -231,7 +237,7 @@ header {
 
 /*Add custom cursor so it auto inherits font styles*/
 .typed::after {
-  content: "|";
+  content: '|';
   color: #6ead3a;
   display: inline;
   -webkit-animation: blink 0.7s infinite;
@@ -378,18 +384,20 @@ header {
       rgba(76, 73, 71, 0.7),
       rgba(76, 73, 71, 0.7)
     ),
-    url("img/skills.jpg");
+    url('img/skills.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh;
   background-attachment: fixed;
   line-height: 170%;
   letter-spacing: 1px;
+  padding-bottom: 100px;
 }
 
 .skills-section h2 {
   color: #efedef;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+  text-shadow:
+    0px 4px 3px rgba(0, 0, 0, 0.4),
+    0px 8px 13px rgba(0, 0, 0, 0.1),
     0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 
@@ -524,8 +532,8 @@ figcaption:active {
 }
 
 .projects-description {
-    padding: 30% 0;
-    font-style: italic;
+  padding: 30% 0;
+  font-style: italic;
 }
 /* ========================= */
 /* CONTACT SECTION */
@@ -538,12 +546,12 @@ figcaption:active {
 }
 
 label,
-input[type="submit"] {
+input[type='submit'] {
   margin-left: 10px;
 }
 
-input[type="text"],
-input[type="email"],
+input[type='text'],
+input[type='email'],
 textarea {
   width: 100%;
   padding: 7px;

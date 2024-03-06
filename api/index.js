@@ -2,20 +2,21 @@ require('dotenv').config();
 
 const express = require('express'),
     app = express(),
-    serveStatic = require('serve-static'),
     bodyParser = require('body-parser'),
     cookieParser = require('cookie-parser'),
     flash = require('connect-flash'),
+    path = require('path'),
     ReCAPTCHA = require('node-grecaptcha-verify').ReCAPTCHA,
-    middleware = require('./middleware')
+    middleware = require('../middleware/index')
 
 
 
 app.use(flash());
 app.use(cookieParser())
 app.use(bodyParser.urlencoded({ extended: true }));
+app.set('views', path.join(__dirname, '/../views'));
 app.set("view engine", "ejs");
-app.use(serveStatic('public/'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // PASSPORT CONFIGURATION
 app.use(require("express-session")({
@@ -61,6 +62,8 @@ app.post("/", (req, res) => {
 });
 
 
-app.listen(3000, () => {
+app.listen(8080, () => {
     console.log("The Server Has Started!")
 });
+
+module.exports = app;
